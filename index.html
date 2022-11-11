@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <title>Easy Hangman game</title>
+</head>
+<body>
+    
+<div class="header">
+    <div class="container">
+      <div class="left-side">
+            <h1>Hangman Game</h1>
+            <h4>Hey!....Can You Guess the Secret Word?</h4>
+        </div>
+        <div class="right-side">
+            <p>Rules:</p>
+            <ul>
+                <li>Type only letter alphabet.</li>
+                <li>You have 5 attempts.</li>
+                <li>If you type wrong letter 5 times, you lost game.</li>
+            </ul>
+    </div>
+</div>
+</div>
+
+<div class="game-section">
+        <div class="left-side">
+            <h1 id="guess-field"></h1>
+            <form name="guessform">
+            <input name="get-letter" type="text" size="5" maxlength="1" id="get-letter" />
+            <input name="guessbutton" type="button" value="Guess" onClick="checkMatch()">
+        </div>
+        <div class="right-side">
+        <img class="img" src="https://play-lh.googleusercontent.com/Eg8Swxv4VMMs-l8r0yzCDVX-Mr6RZiztBFieLfdjH9c5Apn4BoOJT4sMC5Vx5gNnfg">
+        </div>
+</div>
+
+<div class="result-section">
+        <h5>Wrong letters: <span id="wrong-letters"></span></h5>
+        <h3>Result: <span id="result"></span></h3>
+        <button class="play-again">New Game</button>
+</div>
+            </form>
+
+<div class="footer">
+    <div class="container">
+        <p>Made by JirkaVicha 2022</p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

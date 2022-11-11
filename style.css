@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    max-height: 100%;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.header {
+    background-color: brown;    
+}
+
+.header .container {
+    max-width: 1100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px;
+    margin: auto;
+}
+
+.header .left-side {
+    color: white;
+}
+
+.header .right-side {
+    color: rgb(151, 148, 148);
+    font-size: 0.8em;
+}
+
+.game-section {
+    max-width: 1100px;;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+}
+
+.img {
+    width: 300px;
+    margin: 30px;
+}
+
+#guess-field {
+    font-size: 3em;
+    margin-bottom: 50px;
+}
+
+.result-section {
+    padding: 30px;
+    background-color: brown;
+    max-width: 1100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: auto;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5em;
+}
+
+.result-section h3, h5 {
+    margin-bottom: 15px;
+    color: white;
+}
+
+.play-again {
+    background-color: rgb(140, 131, 131);
+    border-style: none;
+    width: 100px;
+    height: 30px;
+    color: white;
+}
+
+.play-again:hover {
+    background-color: rgb(60, 51, 51);
+}
+
+.footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0%;
+    background-color: brown;
+    font-size: 15px;
+}
+
+.footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer p {
+    color: white;
+    font-size: 1em;
+    padding: 10px;
+}
