@@ -26,6 +26,53 @@ function printGuessword() {
     var letter = document.createTextNode(guessWord[i]);
     secretField.appendChild(letter);
   }
+};
+
+// Display stack on the page
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+ctx.lineWidth = 4;
+ctx.beginPath();
+ctx.moveTo(20, 240);
+ctx.lineTo(100, 240);
+
+ctx.moveTo(60, 240);
+ctx.lineTo(60, 40);
+
+ctx.lineTo(130, 40);
+ctx.lineTo(130, 60);
+ctx.stroke();
+
+// draw partts of hangman if failure number goes up
+var drawHangman = function () {
+  if (failure === 1) {
+    ctx.strokeRect(110, 60, 40, 40);
+  } else if (failure === 2) {
+    ctx.beginPath();
+    ctx.moveTo(130, 100);
+    ctx.lineTo(130, 170);
+    ctx.stroke();
+  } else if (failure === 3) {
+    ctx.beginPath();
+    ctx.moveTo(130, 100);
+    ctx.lineTo(100, 130);
+    ctx.stroke();
+  } else if (failure === 4) {
+    ctx.beginPath();
+    ctx.moveTo(130, 100);
+    ctx.lineTo(160, 130);
+    ctx.stroke();
+  } else if (failure === 5) {
+    ctx.beginPath();
+    ctx.moveTo(130, 170);
+    ctx.lineTo(100, 200);
+    ctx.stroke();
+  } else {
+    ctx.beginPath();
+    ctx.moveTo(130, 170);
+    ctx.lineTo(160, 200);
+    ctx.stroke();
+  }
 }
 
 // checks if the letter provided by the user matches one or more of the letters in the word
@@ -54,6 +101,7 @@ var checkMatch = function() {
     var letter = document.createTextNode(" " + symbol);
     wrongLetters.appendChild(letter);
     failure++;
+    drawHangman();
   }
 
   // checks if all letters have been found
@@ -68,7 +116,7 @@ var checkMatch = function() {
   }
 
   // once you got five wrong letters, you lose game
-  if (failure === 5) {
+  if (failure === 6) {
     result.textContent = "Sorry....You've lost!!";
   }
 }

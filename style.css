@@ -39,6 +39,19 @@ body {
     margin: auto;
 }
 
+.right-side .container {
+    width: 300px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#canvas {
+    border: 3px dashed brown;
+    border-radius: 10px;
+}
+
 .img {
     width: 300px;
     margin: 30px;

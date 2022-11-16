@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
     <link rel="stylesheet" href="style.css" />
     <title>Easy Hangman game</title>
 </head>
@@ -34,8 +35,11 @@
             <input name="guessbutton" type="button" value="Guess" onClick="checkMatch()">
         </div>
         <div class="right-side">
-        <img class="img" src="https://play-lh.googleusercontent.com/Eg8Swxv4VMMs-l8r0yzCDVX-Mr6RZiztBFieLfdjH9c5Apn4BoOJT4sMC5Vx5gNnfg">
-        </div>
+        <!-- <img class="img" src="https://play-lh.googleusercontent.com/Eg8Swxv4VMMs-l8r0yzCDVX-Mr6RZiztBFieLfdjH9c5Apn4BoOJT4sMC5Vx5gNnfg"> -->
+        <div class="container">
+        <canvas id="canvas" width="200" height="250"></canvas>
+      </div>
+    </div>
 </div>
 
 <div class="result-section">
